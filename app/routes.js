@@ -6,23 +6,25 @@ angular.module('capFinPlanning').config([
     $urlRouterProvider
   ) {
 
+    var ghPagesRoot = '/capitalfinancialplanning';
+
     $stateProvider
       .state('capFinPlanning', {
         'abstract': true,
         url: '',
-        templateUrl: '/app/views/root.html',
+        templateUrl: ghPagesRoot+'/app/views/root.html',
         controller: 'RootController'
       })
 
       .state('capFinPlanning.home', {
         url: '/home',
-        templateUrl: '/app/views/home.html',
+        templateUrl: ghPagesRoot+'/app/views/home.html',
         controller: 'HomeController'
       })
 
       .state('capFinPlanning.resume', {
         url: '/resume',
-        templateUrl: '/app/views/resume.html',
+        templateUrl: ghPagesRoot+'/app/views/resume.html',
         controller: 'ResumeController'
       })
 
