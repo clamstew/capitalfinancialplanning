@@ -7,8 +7,10 @@ angular.module('capFinPlanning').controller('RootController', [
   $scope.brand = "Capital Financial Planning";
 
   $scope.items = [
-    'one',
-    'thow'
+    { name: 'Retirement', uisref: 'capFinPlanning.servicesretirement' },
+    { name: 'Comprehensive Financial Planning', uisref: 'capFinPlanning.servicescomprehensive' },
+    { name: 'Investments', uisref: 'capFinPlanning.services.retirement' },
+    { name: 'Estate Planning', uisref: 'capFinPlanning.services.retirement' }
   ]
 
 }]);
