@@ -1,5 +1,6 @@
 angular.module('capFinPlanning', [
   'ui.router',
   // 'ngAnimate',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'capFinPlanning.templates'
 ]);

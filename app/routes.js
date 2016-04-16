@@ -1,31 +1,40 @@
 angular.module('capFinPlanning').config([
   '$stateProvider',
+  //'$templateCache',
   '$urlRouterProvider',
   function(
     $stateProvider,
+    //$templateCache,
     $urlRouterProvider
   ) {
 
-    var ghPagesRoot = '/capitalfinancialplanning';
+    var ghPagesRoot = '';
 
     $stateProvider
       .state('capFinPlanning', {
         'abstract': true,
         url: '',
-        templateUrl: ghPagesRoot+'/app/views/root.html',
+        templateProvider: function($templateCache){
+          return $templateCache.get('views/root.html');
+        },
         controller: 'RootController'
       })
 
       .state('capFinPlanning.home', {
         url: '/home',
-        templateUrl: ghPagesRoot+'/app/views/home.html',
+        templateProvider: function($templateCache) {
+          return $templateCache.get('views/home.html');
+        },
         controller: 'HomeController'
       })
 
       .state('capFinPlanning.resume', {
         url: '/resume',
-        templateUrl: ghPagesRoot+'/app/views/resume.html',
-        controller: 'ResumeController'
+        templateProvider: function($templateCache) {
+          return $templateCache.get('views/resume.html');
+        },
+        // templateUrl: '/app/views/resume.html',
+        // controller: 'ResumeController'
       })
 
 

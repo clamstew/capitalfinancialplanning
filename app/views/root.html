@@ -1,7 +1,56 @@
-<div ng-include="'/app/views/header.tmpl.html'"></div>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="row">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">{{brand}}</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="capFinPlanning.resume">Company Profile</a></li>
+          <li uib-dropdown on-toggle="toggled(open)">
+            <a href id="simple-dropdown" uib-dropdown-toggle>
+              Services
+            </a>
+            <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+              <li ng-repeat="choice in items">
+                <a href>{{choice}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- .row -->
+
+  </div><!-- /.container-fluid -->
+</nav>
 
 <div ui-view></div>
 
 <hr/>
 
-<div ng-include="'/app/views/footer.tmpl.html'"></div>
+<div class="container">
+  <div class="row">
+
+    <p style="text-align: center;">William G. Christian, J.D., CFP</p>
+    <p style="text-align: center;">975 Corbindale, Suite 109, Houston TX 77024</p>
+    <p style="text-align: center;"><strong>Tel: 713-932-1955</strong> | Fax: 713-932-9132</p>
+    <p style="text-align: center;"><strong><a href="mailto:bill@capitalfinancialplanning.com?cc=billchristian@ims-securities.com">Email:</strong> billchristian@ims-securities.com</a></p>
+
+    <p style="font-size: 10px;text-align: center;">ONLY TEXAS RESIDENTS ARE AUTHORIZED TO USE THESE SERVICES</p>
+
+    <div class="col-md-6 col-md-offset-3">
+      <p style="font-size: 6px;">William Christian is a Registered Representative of IMS Securities, Inc.(IMS), Member FINRA/SIPC and an Investment Advisor Representative of IMS Financial Advisors, Inc.(IMSFA), a Registered Investment Advisor located 10205 Westheimer Rd., Suite 500, Houston, TX 77042 (713) 266-2993. All information herein has been prepared solely for informational purposes, and is not an offer to buy or sell, or a solicitation of an offer to buy or sell any security or instrument or to participate in any particular trading strategy. William Christian, Capital Financial Planning Group, IMS, and IMSFA do not make any representations or warranties as to the accuracy, timeliness, suitability, completeness, or relevance of any information prepared by any unaffiliated third party, whether linked to this web site or incorporated herein, and take no responsibility. All such information is provided solely for convenience purposes only. William Christian, Capital Financial Planning Group, IMS, and IMSFA do not endorse, control, or receive compensation from any of the third party advertisers within this website. William Christian, Capital Financial Planning Group, IMS, and IMSFA are not affiliated with any of the firms or entities listed unless specifically stated.</p>
+    </div>
+  </div>
+</div>
