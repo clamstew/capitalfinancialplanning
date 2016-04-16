@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="capFinPlanning">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Capital Financial Planning Group</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    </head>
+    <body>
+      <noscript>Javascript is not enabled on your browser.  Please go to <a href="http://browsehappy.com/">Browse Happy</a> to download a modern browser.</noscript>
+      <!-- body goes here -->
+
+      <div ui-view></div>
+
+      <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+      <script type="text/javascript" src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+      <script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
+      <script type="text/javascript" src="./app/module.js"></script>
+      <script type="text/javascript" src="./app/routes.js"></script>
+      <script type="text/javascript" src="./app/controllers/root-controller.js"></script>
+      <script type="text/javascript" src="./app/controllers/home-controller.js"></script>
+
+      <script type="text/javascript">
+        // angular.module('capFinPlanning').directive('mainBody', [function() {
+        //   // body...
+        // }]);
+      </script>
+    </body>
+</html>
