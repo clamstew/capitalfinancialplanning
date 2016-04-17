@@ -32,7 +32,10 @@ angular.module('capFinPlanning').config([
         url: '/resume',
         templateProvider: function($templateCache) {
           return $templateCache.get('views/resume.html');
-        }
+        },
+        controller: ['$scope', function($scope) {
+          $scope.year = moment().year();
+        }]
       })
 
       .state('capFinPlanning.servicesretirement', {
