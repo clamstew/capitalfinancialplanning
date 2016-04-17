@@ -49,6 +49,19 @@ angular.module('capFinPlanning').config([
         }
       })
 
+      .state('capFinPlanning.servicesinvestments', {
+        url: '/services/investments',
+        templateProvider: function($templateCache) {
+          return $templateCache.get('views/services-investments.html');
+        }
+      })
+
+      .state('capFinPlanning.servicesestate', {
+        url: '/services/estate',
+        templateProvider: function($templateCache) {
+          return $templateCache.get('views/services-estate.html');
+        }
+      })
 
     $urlRouterProvider.otherwise('/home');
 

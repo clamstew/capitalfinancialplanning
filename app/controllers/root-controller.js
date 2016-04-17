@@ -9,8 +9,8 @@ angular.module('capFinPlanning').controller('RootController', [
   $scope.items = [
     { name: 'Retirement', uisref: 'capFinPlanning.servicesretirement' },
     { name: 'Comprehensive Financial Planning', uisref: 'capFinPlanning.servicescomprehensive' },
-    { name: 'Investments', uisref: 'capFinPlanning.services.retirement' },
-    { name: 'Estate Planning', uisref: 'capFinPlanning.services.retirement' }
+    { name: 'Investments', uisref: 'capFinPlanning.servicesinvestments' },
+    { name: 'Estate Planning', uisref: 'capFinPlanning.servicesestate' }
   ]
 
 }]);
