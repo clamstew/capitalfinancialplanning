@@ -11,6 +11,12 @@ angular.module('capFinPlanning').controller('RootController', [
     { name: 'Comprehensive Financial Planning', uisref: 'capFinPlanning.servicescomprehensive' },
     { name: 'Investments', uisref: 'capFinPlanning.servicesinvestments' },
     { name: 'Estate Planning', uisref: 'capFinPlanning.servicesestate' }
-  ]
+  ];
+
+  $scope.navbarCollapsed = true;
+
+  $scope.$on('navbar:collapse', function() {
+    $scope.navbarCollapsed = true;
+  });
 
 }]);
