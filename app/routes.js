@@ -38,6 +38,13 @@ angular.module('capFinPlanning').config([
         }]
       })
 
+      .state('capFinPlanning.servicesoverview', {
+        url: '/services/overview',
+        templateProvider: function($templateCache) {
+          return $templateCache.get('views/services.html');
+        }
+      })
+
       .state('capFinPlanning.servicesretirement', {
         url: '/services/retirement',
         templateProvider: function($templateCache) {
