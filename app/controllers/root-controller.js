@@ -4,7 +4,7 @@ angular.module('capFinPlanning').controller('RootController', [
     $scope
   ) {
 
-  $scope.brand = "Capital Financial Planning";
+  $scope.brand = "Capital Financial Planning Group";
 
   $scope.items = [
     { name: 'Overview', uisref: 'capFinPlanning.servicesoverview' },
